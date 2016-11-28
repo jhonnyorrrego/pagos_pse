@@ -157,7 +157,7 @@ $_SESSION["idpersona"]=$idpersona;//Guardo en sesion el idpersona para llamarlo 
 				if(html.returncode=='SUCCESS'){
 					window.open(html.bankurl,"_blank");
 					
-					$("#guardar").hide();
+					//$("#guardar").hide();
 					
 					estado_proceso_pago();
 					setInterval('estado_proceso_pago()',cantidad);

@@ -99,7 +99,7 @@ class libpse{
 		$datos["transactionID"]=$datos_transaccion[0]["transactionid"];
 		$result=$client->call('getTransactionInformation',$datos);
 		
-		/*$campos=array();
+		$campos=array();
 		$valores=array();
 		foreach($result["getTransactionInformationResult"] as $campo => $value){
 			if($campo){
@@ -114,8 +114,6 @@ class libpse{
 		$valores[]=$datos_transaccion[0]["idpersona_transaccion"];
 		
 		$id=$this->insertar('persona_estado_trans',$campos,$valores);//Almaceno datos de respuesta de consulta del estado de transaccion
-		$sql1="select * from persona_transaccion where idpersona_transaccion=".$id;
-		$resultado=$this->listar_datos($sql1);*/
 		
 		return($result["getTransactionInformationResult"]);
 	}
