@@ -103,6 +103,7 @@ function consultar_estado(){
 	require_once('lib/nusoap.php');
 	$client=new nusoap_client(WEBSERVICE,true);
 	$resultado=$conexion->consultar_estado_transaccion($client,$idpersona);
+	$resultado["responseReasonText"]=(htmlentities(utf8_encode($resultado["responseReasonText"])));
 	
 	echo(json_encode($resultado));
 }
